@@ -5,8 +5,11 @@ FROM  index.tenxcloud.com/efish/ansr:1.0
 # RUN apk -u add openssh redis subversoin nodejs g++ make python && \
 # RUN npm install -g pomelo pm2
 
-RUN apk update && \
-	 apk -u add bash g++ make python
+RUN apk update
+RUN apk -u add bash
+RUN apk -u add g++
+RUN apk -u add make
+RUN apk -u add python
 RUN npm install -g pomelo
 RUN npm install -g pm2
 
